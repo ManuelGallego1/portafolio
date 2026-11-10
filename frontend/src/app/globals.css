@@ -1,0 +1,179 @@
+html,
+body {
+  margin: 0;
+  background: #09090b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent, #d4ff3a);
+}
+
+button {
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 #09090b;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 999px;
+  border: 2px solid #09090b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #d4ff3a);
+}
+
+::selection {
+  background: var(--accent, #d4ff3a);
+  color: #09090b;
+}
+
+html[data-neon-cursor]:not([data-text-cursor]) * {
+  cursor: none !important;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent);
+  }
+  70% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes mgMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="mgMarquee"] {
+    animation: none !important;
+  }
+}
+
+@keyframes mgType {
+  from {
+    width: 0;
+  }
+  to {
+    width: 2ch;
+  }
+}
+
+@keyframes mgBar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes mgToast {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Native equivalents of v4 style-hover and style-focus attributes */
+.mg-hero-cta:hover {
+  color: #09090b !important;
+  box-shadow: 0 0 48px color-mix(in oklch, var(--accent) 55%, transparent) !important;
+}
+
+.mg-hero-cv:hover {
+  border-color: var(--accent) !important;
+  color: #fafafa !important;
+}
+
+.mg-border-hover:hover {
+  border-color: var(--accent) !important;
+}
+
+.mg-proj-card:hover {
+  border-color: var(--accent) !important;
+  color: #a1a1aa !important;
+}
+
+.mg-circle-btn:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+.mg-use-pill:hover {
+  color: #09090b !important;
+  box-shadow: 0 0 16px var(--accent) !important;
+}
+
+.mg-clear-btn:hover {
+  color: #fafafa !important;
+}
+
+.mg-mailto:hover {
+  color: #fafafa !important;
+  border-color: #fafafa !important;
+}
+
+.mg-accent-hover:hover {
+  color: var(--accent) !important;
+}
+
+.mg-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 18%, transparent) !important;
+}
+
+.mg-submit-btn:hover {
+  box-shadow: 0 0 44px color-mix(in oklch, var(--accent) 55%, transparent) !important;
+}
+
+.mg-top-btn:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: 0 0 24px color-mix(in oklch, var(--accent) 35%, transparent) !important;
+}
+
